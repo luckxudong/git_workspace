@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "SpineNodeTest.h"
 
 USING_NS_CC;
 
@@ -25,6 +26,12 @@ Scene *HelloWorld::createScene() {
             0.01,
             "custom_schedule"
     );
+
+    colorLayer->ignoreAnchorPointForPosition(true);
+
+    auto spineLayer = SpineNodeTest::create();
+
+    scene->addChild(spineLayer);
 
     return scene;
 }
