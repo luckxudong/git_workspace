@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
 #include "SpineNodeTest.h"
+#include "ActionTestLayer.h"
 
 USING_NS_CC;
 
@@ -32,6 +33,10 @@ Scene *HelloWorld::createScene() {
     auto spineLayer = SpineNodeTest::create();
 
     scene->addChild(spineLayer);
+
+    auto actionTestLayer = ActionTestLayer::create();
+
+    scene->addChild(actionTestLayer);
 
     return scene;
 }
